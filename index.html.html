@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Box ni design */
+  .magic-box {
+    width: 350px;
+    padding: 30px;
+    background-color: #2980b9; /* Bhuro rang */
+    color: white;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 15px;
+    margin: 50px auto;
+    
+    /* Animation smooth karva mate */
+    transition: all 0.4s ease;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+  }
+
+  /* CSS: Jyare mouse upar aave tyare shu thavu joiye */
+  .magic-box:hover {
+    transform: scale(1.1) rotate(3deg); /* Box moto thase ane thodo trunso thase */
+    background-color: #e74c3c; /* Laal rang thai jase */
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.5);
+  }
+</style>
+</head>
+<body>
+
+  <h2 style="text-align:center;">Mouse Box Upar Fervo ane Jadu Jovo ✨</h2>
+  
+  <!-- HTML: Screen par box -->
+  <div class="magic-box" id="myBanner">
+    Galsaniya Computer
+  </div>
+
+  <!-- JavaScript: Mouse aave tyare text badalva mate -->
+  <script>
+    var banner = document.getElementById("myBanner");
+
+    // Jyare mouse box ni andar aave
+    banner.addEventListener("mouseenter", function() {
+      banner.innerHTML = "Welcome! Form Bharva Aavo 📝";
+    });
+
+    // Jyare mouse box ni bahar jay
+    banner.addEventListener("mouseleave", function() {
+      banner.innerHTML = "Galsaniya Computer 💻";
+    });
+  </script>
+
+</body>
+</html>
